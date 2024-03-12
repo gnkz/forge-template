@@ -14,6 +14,9 @@
         };
       in {
         devShell = with pkgs;
-          mkShell { buildInputs = [ foundry-bin solc bun ]; };
+          mkShell {
+            packages = [ bun ];
+            buildInputs = [ foundry-bin solc ];
+          };
       });
 }
